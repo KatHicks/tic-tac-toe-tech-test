@@ -1,5 +1,3 @@
-'use strict';
-
 describe('Board', function() {
 
   var board;
