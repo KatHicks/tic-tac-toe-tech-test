@@ -21,11 +21,11 @@ describe('Player', function() {
   });
 
   it('should have a property for maker', function() {
-    expect(player.maker).toBeDefined();
+    expect(player.marker).toBeDefined();
   });
 
   it('should have the correct property for maker', function() {
-    expect(player.maker).toBe("X");
+    expect(player.marker).toBe("X");
   });
 
 });
