@@ -20,4 +20,17 @@ describe('Board', function() {
     expect(board.grid).toEqual(grid);
   });
 
+  describe('#isAvailable', function(){
+    var board;
+
+    beforeEach(function() {
+      board = new Board();
+    });
+
+    it('should return false if array contains a string', function() {
+      board.grid[0][0].push("X");
+      expect(board.isAvailable([0,0])).toEqual(false);
+    });
+  });
+
 });
