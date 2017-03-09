@@ -12,4 +12,8 @@ describe('Game', function() {
     expect(game instanceof(Game)).toBe(true);
   });
 
+  it('should have a property for the board', function() {
+    expect(game.board).toBeDefined();
+  });
+
 });
