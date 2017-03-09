@@ -25,4 +25,12 @@ describe('Game', function() {
     expect(game.player_two).toBeDefined();
   });
 
+  it('should have a turn property to denote who is the current player', function(){
+    expect(game.turn).toBeDefined();
+  });
+
+  it('should start with current player being player one', function(){
+    expect(game.turn).toEqual(game.player_one);
+  });
+
 });
