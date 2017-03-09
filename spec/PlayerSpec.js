@@ -5,7 +5,7 @@ describe('Player', function() {
   var player;
 
   beforeEach(function() {
-    player = new Player("Kat");
+    player = new Player("Kat", "X");
   });
 
   it('should be a defined object', function() {
@@ -18,6 +18,14 @@ describe('Player', function() {
 
   it('should have the correct property for name', function() {
     expect(player.name).toBe("Kat");
+  });
+
+  it('should have a property for maker', function() {
+    expect(player.maker).toBeDefined();
+  });
+
+  it('should have the correct property for maker', function() {
+    expect(player.maker).toBe("X");
   });
 
 });
