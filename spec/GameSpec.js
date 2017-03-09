@@ -53,27 +53,51 @@ describe('Game', function(){
       expect(game.board.grid[0][1]).toContain("X");
     });
 
-    it('should return "game over" if the three top cells contain the same symbol', function(){
+    it('should return "game over" if the top row contains three matching symbols', function(){
       game.play([0,0]);
       game.play([1,0]);
       game.play([0,1]);
-      game.play([2,0]);
+      game.play([2,2]);
       expect(function(){game.play([0,2]);}).toThrow("Game over!");
     });
 
-    it('should return "game over" if the three middle cells contain the same symbol', function(){
+    it('should return "game over" if the middle row contains three matching symbols', function(){
       game.play([1,0]);
       game.play([0,0]);
       game.play([1,1]);
-      game.play([2,0]);
+      game.play([2,2]);
       expect(function(){game.play([1,2]);}).toThrow("Game over!");
     });
 
-    it('should return "game over" if the three bottom cells contain the same symbol', function(){
+    it('should return "game over" if the bottom row contains three matching symbols', function(){
       game.play([2,0]);
       game.play([0,0]);
       game.play([2,1]);
+      game.play([1,2]);
+      expect(function(){game.play([2,2]);}).toThrow("Game over!");
+    });
+
+    it('should return "game over" if the right column contains three matching symbols', function(){
+      game.play([0,2]);
       game.play([1,0]);
+      game.play([1,2]);
+      game.play([2,1]);
+      expect(function(){game.play([2,2]);}).toThrow("Game over!");
+    });
+
+    it('should return "game over" if the middle column contains three matching symbols', function(){
+      game.play([0,1]);
+      game.play([0,0]);
+      game.play([1,1]);
+      game.play([2,2]);
+      expect(function(){game.play([2,1]);}).toThrow("Game over!");
+    });
+
+    it('should return "game over" if the left column contains three matching symbols', function(){
+      game.play([0,2]);
+      game.play([0,0]);
+      game.play([1,2]);
+      game.play([1,1]);
       expect(function(){game.play([2,2]);}).toThrow("Game over!");
     });
 
