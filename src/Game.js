@@ -27,6 +27,12 @@
           throw "Game over!";
         }
       }
+      if (this.compareDiagonalRightLeft() && this.notEmptyCentre()) {
+        throw "Game over!";
+      }
+      if (this.compareDiagonalLeftRight() && this.notEmptyCentre()) {
+        throw "Game over!";
+      }
     },
     compareCells: function(cell_one, cell_two){
       return JSON.stringify(this.board.grid[cell_one[0]][cell_one[1]]) == JSON.stringify(this.board.grid[cell_two[0]][cell_two[1]]);
@@ -48,6 +54,15 @@
     },
     winningCol: function(col_number){
       return this.compareCol(col_number) && this.notEmptyCol(col_number);
+    },
+    compareDiagonalRightLeft: function(){
+      return this.compareCells([0,0], [1,1]) && this.compareCells([1,1], [2,2]);
+    },
+    compareDiagonalLeftRight: function(){
+      return this.compareCells([0,2], [1,1]) && this.compareCells([1,1], [2,0]);
+    },
+    notEmptyCentre: function(){
+      return this.board.grid[1][1][0] == "X" || this.board.grid[1][1][0] == "O";
     }
   };
 

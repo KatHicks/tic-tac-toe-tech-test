@@ -63,7 +63,7 @@ describe('Game', function(){
 
     it('should return "game over" if the middle row contains three matching symbols', function(){
       game.play([1,0]);
-      game.play([0,0]);
+      game.play([0,1]);
       game.play([1,1]);
       game.play([2,2]);
       expect(function(){game.play([1,2]);}).toThrow("Game over!");
@@ -87,7 +87,7 @@ describe('Game', function(){
 
     it('should return "game over" if the middle column contains three matching symbols', function(){
       game.play([0,1]);
-      game.play([0,0]);
+      game.play([0,2]);
       game.play([1,1]);
       game.play([2,2]);
       expect(function(){game.play([2,1]);}).toThrow("Game over!");
@@ -98,6 +98,22 @@ describe('Game', function(){
       game.play([0,0]);
       game.play([1,2]);
       game.play([1,1]);
+      expect(function(){game.play([2,2]);}).toThrow("Game over!");
+    });
+
+    it('should return "game over" if the diagonal right to left contains three matching symbols', function(){
+      game.play([0,2]);
+      game.play([0,0]);
+      game.play([1,1]);
+      game.play([1,2]);
+      expect(function(){game.play([2,0]);}).toThrow("Game over!");
+    });
+
+    it('should return "game over" if the diagonal left to right contains three matching symbols', function(){
+      game.play([0,0]);
+      game.play([0,1]);
+      game.play([1,1]);
+      game.play([1,2]);
       expect(function(){game.play([2,2]);}).toThrow("Game over!");
     });
 
