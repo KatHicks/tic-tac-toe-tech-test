@@ -14,3 +14,22 @@ The rules of tic-tac-toe are as follows:
 * A game is over when all fields are taken
 
 Build the business logic for a game of tic tac toe. It should be easy to implement a working game of tic tac toe by combining your code with any user interface, whether web or command line.
+
+### Data Structure
+
+* First step of implementation is definitely to figure out the data structure
+* Played around in the console and realised that can structure the grid as a multi-dimensional array
+
+
+![data_structure](/assets/data_structure.png?raw=true "Data Structure")
+
+* Required to reference each cell
+
+|**[0][0]**|**[0][1]**|**[0][2]**|
+|:--------:|:--------:|:--------:|
+|**[1][0]**|**[1][1]**|**[1][2]**|
+|**[2][0]**|**[2][1]**|**[2][2]**|
+
+### Domain Model
+
+![domain_model](/assets/domain_model.png?raw=true "Data Structure")
