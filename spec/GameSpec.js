@@ -55,6 +55,14 @@ describe('Game', function(){
       expect(game.board.grid[0][1]).toContain("X");
     });
 
+    it('should return "game over" if the three top cells contain the same symbol', function(){
+      game.play([0,0]);
+      game.play([1,0]);
+      game.play([0,1]);
+      game.play([2,0]);
+      expect(function(){game.play([0,2]);}).toThrow("Game over!");
+    });
+
   });
 
 });
