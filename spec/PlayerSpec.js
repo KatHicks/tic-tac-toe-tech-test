@@ -12,8 +12,12 @@ describe('Player', function() {
     expect(player instanceof(Player)).toBe(true);
   });
 
-  it('should have a property for the board', function() {
+  it('should have a property for name', function() {
     expect(player.name).toBeDefined();
+  });
+
+  it('should have the correct property for name', function() {
+    expect(player.name).toBe("Kat");
   });
 
 });
