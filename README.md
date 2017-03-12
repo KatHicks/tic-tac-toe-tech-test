@@ -1,6 +1,8 @@
 # Practice Technical Test: Tic Tac Toe
 ### Makers Academy Week 10
 
+-- BADGES TO GO HERE --
+
 ### Instructions
 
 The rules of tic-tac-toe are as follows:
