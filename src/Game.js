@@ -1,4 +1,4 @@
-(function(exports) {
+====(function(exports) {
 
   function Game(player_one, player_two, board = new Board()) {
     this.player_one = player_one;
@@ -40,7 +40,7 @@
       }
     },
     rowWinner: function(i){
-      if (this.board.grid[i][0][0] == this.player_one.marker) {
+      if (this.board.grid[i][0][0] === this.player_one.marker) {
         throw 'Won by Player 1!';
       }
       else {
@@ -48,7 +48,7 @@
       }
     },
     colWinner: function(i){
-      if (this.board.grid[0][i][0] == this.player_one.marker) {
+      if (this.board.grid[0][i][0] === this.player_one.marker) {
         throw 'Won by Player 1!';
       }
       else {

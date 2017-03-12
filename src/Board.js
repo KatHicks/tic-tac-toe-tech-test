@@ -18,19 +18,19 @@
       return ((this.compareDiagonalRightLeft() && this.notEmptyCentre()) || (this.compareDiagonalLeftRight() && this.notEmptyCentre()));
     },
     compareCells: function(cell_one, cell_two){
-      return JSON.stringify(this.grid[cell_one[0]][cell_one[1]]) == JSON.stringify(this.grid[cell_two[0]][cell_two[1]]);
+      return JSON.stringify(this.grid[cell_one[0]][cell_one[1]]) === JSON.stringify(this.grid[cell_two[0]][cell_two[1]]);
     },
     compareRow: function(row_number){
       return this.compareCells([row_number,0], [row_number,1]) && this.compareCells([row_number,1], [row_number,2]);
     },
     notEmptyRow: function(row_number){
-      return this.grid[row_number][0][0] == "X" || this.grid[row_number][0][0] == "O";
+      return this.grid[row_number][0][0] === "X" || this.grid[row_number][0][0] === "O";
     },
     compareCol: function(col_number){
       return this.compareCells([0,col_number], [1,col_number]) && this.compareCells([1,col_number], [2,col_number]);
     },
     notEmptyCol: function(col_number){
-      return this.grid[0][col_number][0] == "X" || this.grid[0][col_number][0] == "O";
+      return this.grid[0][col_number][0] === "X" || this.grid[0][col_number][0] === "O";
     },
     compareDiagonalRightLeft: function(){
       return this.compareCells([0,0], [1,1]) && this.compareCells([1,1], [2,2]);
@@ -39,7 +39,7 @@
       return this.compareCells([0,2], [1,1]) && this.compareCells([1,1], [2,0]);
     },
     notEmptyCentre: function(){
-      return this.grid[1][1][0] == "X" || this.grid[1][1][0] == "O";
+      return this.grid[1][1][0] === "X" || this.grid[1][1][0] === "O";
     }
   };
 
