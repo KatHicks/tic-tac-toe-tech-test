@@ -1,7 +1,7 @@
 engines:
   rubocop:
     enabled: true
-  brakeman:
+  jslint:
     enabled: true
   eslint:
     enabled: true
