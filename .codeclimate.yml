@@ -1,6 +1,2 @@
 exclude_paths:
-- "assets/jasmine-2.5.2/boot.js"
-- "assets/jasmine-2.5.2/console.js"
-- "assets/jasmine-2.5.2/jasmine-html.js"
-- "assets/jasmine-2.5.2/jasmine.css"
-- "assets/jasmine-2.5.2/jasmine.js"
+- "assets/jasmine-2.5.2/"
