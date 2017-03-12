@@ -24,6 +24,7 @@ Build the business logic for a game of tic tac toe. It should be easy to impleme
 ![data_structure](/assets/data_structure.png?raw=true "Data Structure")
 
 * Required to reference each cell
+* Follows structure of [row] [col]
 
 |**[0][0]**|**[0][1]**|**[0][2]**|
 |:--------:|:--------:|:--------:|
