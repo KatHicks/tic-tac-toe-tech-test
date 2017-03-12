@@ -28,9 +28,39 @@
     },
     checkWin: function(){
       for (i = 0; i < 3; i++) {
-        if (this.board.winningRow(i) || this.board.winningCol(i) || this.board.winningDiag()) {
-          throw "Game over!";
+        if (this.board.winningRow(i)) {
+          this.rowWinner(i);
         }
+        else if (this.board.winningCol(i)) {
+          this.colWinner(i);
+        }
+        else if (this.board.winningDiag()) {
+          this.diagWinner();
+        }
+      }
+    },
+    rowWinner: function(i){
+      if (this.board.grid[i][0][0] == this.player_one.marker) {
+        throw 'Won by Player 1!';
+      }
+      else {
+        throw 'Won by Player 2!';
+      }
+    },
+    colWinner: function(i){
+      if (this.board.grid[0][i][0] == this.player_one.marker) {
+        throw 'Won by Player 1!';
+      }
+      else {
+        throw 'Won by Player 2!';
+      }
+    },
+    diagWinner: function(){
+      if (this.board.grid[1][1][0] == this.player_one.marker) {
+        throw 'Won by Player 1!';
+      }
+      else {
+        throw 'Won by Player 2!';
       }
     }
   };
