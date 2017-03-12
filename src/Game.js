@@ -19,7 +19,7 @@
       this.switchPlayer();
     },
     switchPlayer: function(){
-      if (this.turn == this.player_one) {
+      if (this.turn === this.player_one) {
         this.turn = this.player_two;
       }
       else {
@@ -56,7 +56,7 @@
       }
     },
     diagWinner: function(){
-      if (this.board.grid[1][1][0] == this.player_one.marker) {
+      if (this.board.grid[1][1][0] === this.player_one.marker) {
         throw 'Won by Player 1!';
       }
       else {
