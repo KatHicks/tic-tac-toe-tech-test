@@ -1,6 +1,8 @@
 # Practice Technical Test: Tic Tac Toe
 ### Makers Academy Week 10
 
+[![Code Climate](https://codeclimate.com/github/KatHicks/tic-tac-toe-tech-test/badges/gpa.svg)](https://codeclimate.com/github/KatHicks/tic-tac-toe-tech-test)
+
 ### Instructions
 
 The rules of tic-tac-toe are as follows:
