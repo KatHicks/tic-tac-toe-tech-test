@@ -3,7 +3,9 @@ describe('Game', function(){
   var game;
 
   beforeEach(function(){
-    game = new Game("Kat", "Bob");
+    player_one = new Player("Kat", "X");
+    player_two = new Player("Bob", "X");
+    game = new Game(player_one, player_two);
   });
 
   it('should be a defined object', function(){
